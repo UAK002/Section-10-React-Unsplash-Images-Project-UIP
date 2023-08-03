@@ -69,17 +69,20 @@ html {
     background-color 0.3s ease-in-out;
 }
 
+@media (prefers-color-scheme: dark) {
+  .root {
+    --textColor: var(--dark-mode-text-color);
+    --backgroundColor: var(--dark-mode-bg-color);
+  }
+}
+
 .dark-theme {
-  /* background: blue; */
-  --backgroundColor: var(--dark-mode-bg-color);
-  /* color: white; */
   --textColor: var(--dark-mode-text-color);
+  --backgroundColor: var(--dark-mode-bg-color);
 }
 
 body {
-  /* background: red; */
   background: var(--backgroundColor);
-  /* color: green; */
   color: var(--textColor);
   transition: var(--darkModeTransition);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
