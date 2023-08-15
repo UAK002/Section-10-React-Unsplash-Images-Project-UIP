@@ -1,12 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-// const url =
-//   'https://api.unsplash.com/search/photos?client_id=ZpHERRZLFMcptAlGTYga5y0P3lz4hP1slFkQXQeq9Wo&query=office';
 const url =
   'https://api.unsplash.com/search/photos?client_id=ZpHERRZLFMcptAlGTYga5y0P3lz4hP1slFkQXQeq9Wo&query=cat';
-// const url =
-//   'https://api.unsplash.com/search/photos?client_id=ZpHERRZLFMcptAlGTYga5y0P3lz4hP1slFkQXQeq9Wo&query=shakeAndBake';
 
 const Gallery = () => {
   const response = useQuery({
@@ -16,7 +12,6 @@ const Gallery = () => {
       return result.data;
     },
   });
-  // console.log(response);
   if (response.isLoading) {
     return (
       <section className="image-container">
