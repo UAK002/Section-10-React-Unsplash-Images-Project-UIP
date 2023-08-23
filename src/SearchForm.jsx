@@ -6,7 +6,7 @@ const SearchForm = () => {
     e.preventDefault();
     const searchValue = e.target.elements.search.value;
     if (!searchValue) return;
-    console.log(searchValue);
+    // console.log(searchValue);
     setSearchTerm(searchValue);
   };
 
